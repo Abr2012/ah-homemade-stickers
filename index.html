@@ -147,7 +147,7 @@ const products=[
 {name:"Keychain",price:null,emoji:"🔑",cat:"Other"}
 ];
 
-let cart=[];
+let cart=JSON.parse(localStorage.getItem("ahCart") || "[]");
 let category="All";
 
 function setCategory(value,button){
@@ -197,6 +197,7 @@ renderCart();
 }
 
 function renderCart(){
+  localStorage.setItem("ahCart", JSON.stringify(cart));
 document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0);
 document.getElementById("cartItems").innerHTML=cart.length?
 cart.map((x,i)=>`<div class="cart-row">
