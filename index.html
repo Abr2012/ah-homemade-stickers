@@ -3,145 +3,176 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AH Homemade Stickers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AH Homemade Stickers | Shop</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#fcf5ff;color:#32134b}
-header{background:linear-gradient(120deg,#6d16a8,#c04bdb);color:white;padding:25px 6%;text-align:center}
-header h1{font-size:32px;margin:5px}
-header p{margin:8px}
-nav{background:#4c1676;padding:14px;text-align:center;position:sticky;top:0;z-index:5}
-nav a{color:white;text-decoration:none;margin:0 12px;font-weight:bold}
-.hero{padding:55px 20px;text-align:center;background:linear-gradient(135deg,#f5d9ff,#fff0f8)}
-.hero h2{font-size:38px;margin:5px}
+body{margin:0;font-family:Arial,sans-serif;background:#faf7ff;color:#302044}
+header{background:linear-gradient(120deg,#55128b,#a43acb);color:white;padding:18px 5%}
+.top{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.brand{font-size:25px;font-weight:800}
+.cart-btn{background:white;color:#68219b;border:0;padding:11px 17px;border-radius:25px;font-weight:bold;cursor:pointer}
+.search-wrap{display:flex;max-width:650px;margin:18px auto 0}
+.search-wrap input{flex:1;padding:14px;border:0;border-radius:10px 0 0 10px;min-width:0;font-size:15px}
+.search-wrap button{border:0;padding:0 18px;background:#ffd9f5;border-radius:0 10px 10px 0;cursor:pointer}
+nav{display:flex;justify-content:center;gap:25px;background:#42116c;padding:14px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-weight:bold}
+.hero{margin:22px 5%;padding:45px 20px;text-align:center;border-radius:22px;background:linear-gradient(130deg,#f0d5ff,#ffe2f4)}
+.hero h1{font-size:clamp(28px,5vw,43px);margin:0 0 12px;color:#63208f}
 .hero p{font-size:17px}
-.btn{border:0;background:#8126b3;color:white;padding:12px 20px;border-radius:25px;font-weight:bold;cursor:pointer}
-.btn:hover{background:#541276}
-section{padding:35px 6%}
-h2.heading{text-align:center;color:#7622a5;font-size:28px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
-.card{background:white;border-radius:18px;padding:20px;text-align:center;box-shadow:0 4px 15px #d8b9e8}
-.card .emoji{font-size:42px}
-.card h3{margin:10px 0 5px}
-.price{font-size:20px;color:#8126b3;font-weight:bold;margin:10px}
-.offer{background:linear-gradient(120deg,#7819a7,#bd4ad5);color:white;border-radius:20px;padding:22px;margin:14px 0;text-align:center}
-.offer h3{font-size:21px}
-.cart{background:white;border-radius:18px;padding:22px;max-width:650px;margin:auto;box-shadow:0 4px 15px #d8b9e8}
-.cart-row{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid #eee;padding:12px 0}
-.cart-row button{border:0;border-radius:8px;padding:5px 10px;background:#f0ddfa;cursor:pointer}
-.total{font-size:23px;font-weight:bold;text-align:right;margin:20px 0}
-input,textarea{width:100%;padding:12px;margin:7px 0 14px;border:1px solid #d3b4e5;border-radius:10px;font:inherit}
-footer{background:#4c1676;color:white;text-align:center;padding:25px}
-.small{font-size:13px;color:#745b80}
+.btn{background:#7926ad;color:white;border:0;padding:12px 19px;border-radius:25px;font-weight:bold;cursor:pointer}
+.btn:hover{background:#511477}
+section{padding:22px 5%}
+.heading{text-align:center;color:#70219c;font-size:27px}
+.categories{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.category{border:1px solid #d8b9ed;background:white;color:#70219c;padding:10px 17px;border-radius:25px;cursor:pointer}
+.category.active{background:#70219c;color:white}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:17px}
+.card{background:white;border-radius:17px;padding:20px;text-align:center;box-shadow:0 4px 14px #e8d8f0;transition:.2s}
+.card:hover{transform:translateY(-4px)}
+.emoji{font-size:48px}
+.card h3{font-size:16px;min-height:38px}
+.price{font-size:20px;font-weight:bold;color:#7621a5;margin:12px}
+.offer{background:linear-gradient(120deg,#7620a6,#bd50d3);color:white;padding:23px;border-radius:18px;text-align:center;margin:15px 0}
+.cart-box{max-width:680px;margin:auto;background:white;padding:22px;border-radius:18px;box-shadow:0 4px 15px #e4d4ed}
+.cart-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #eee}
+.cart-row button{border:0;padding:7px 11px;border-radius:8px;cursor:pointer;background:#ead8f5}
+.total{text-align:right;font-size:23px;font-weight:bold;margin:20px 0}
+input,textarea{width:100%;padding:13px;margin:7px 0 15px;border:1px solid #d7bde7;border-radius:10px;font:inherit}
+footer{margin-top:30px;background:#42116c;color:white;text-align:center;padding:25px}
+.small{font-size:13px;color:#806b8d}
+.empty{text-align:center;padding:25px;color:#806b8d}
 </style>
 </head>
 <body>
 
 <header>
-<h1>💜 AH Homemade Stickers</h1>
-<p>✨ Handmade with Love • Made to Make You Smile ✨</p>
+<div class="top">
+<div class="brand">💜 AH Homemade Stickers</div>
+<button class="cart-btn" onclick="location.href='#cart'">🛒 Cart (<span id="count">0</span>)</button>
+</div>
+<div class="search-wrap">
+<input id="search" placeholder="Search stickers, keychains..." oninput="renderProducts()">
+<button onclick="renderProducts()">🔍 Search</button>
+</div>
 </header>
 
 <nav>
 <a href="#home">Home</a>
 <a href="#shop">Shop</a>
 <a href="#offers">Combo Offers</a>
-<a href="#cart">Cart 🛒</a>
+<a href="#cart">My Cart</a>
 </nav>
 
 <div class="hero" id="home">
-<h2>Welcome to AH Homemade Stickers! 💜</h2>
-<p>Discover cute handmade stickers and lovely keychains!</p>
-<a href="#shop"><button class="btn">Explore Our Shop 🛍️</button></a>
+<h1>Make Your World More Colourful! 🌸</h1>
+<p>Discover cute stickers and lovely handmade creations.</p>
+<p>✨ Handmade with Love ✨</p>
+<button class="btn" onclick="location.href='#shop'">Shop Now 🛍️</button>
 </div>
 
+<section>
+<h2 class="heading">Explore Categories</h2>
+<div class="categories">
+<button class="category active" onclick="setCategory('All',this)">All</button>
+<button class="category" onclick="setCategory('Cute',this)">😊 Cute</button>
+<button class="category" onclick="setCategory('Letters',this)">🔤 Letters</button>
+<button class="category" onclick="setCategory('Shapes',this)">⭐ Shapes</button>
+<button class="category" onclick="setCategory('Nature',this)">🌸 Nature</button>
+<button class="category" onclick="setCategory('Other',this)">✨ Other</button>
+</div>
+</section>
+
 <section id="shop">
-<h2 class="heading">🌸 Our Sticker Collection 🌸</h2>
+<h2 class="heading">🌷 Our Products</h2>
 <div class="grid" id="products"></div>
 </section>
 
 <section id="offers">
-<h2 class="heading">👑 Special Combo Offers 👑</h2>
+<h2 class="heading">🎁 Special Combo Offers</h2>
 <div class="offer">
-<h3>😊 Smiley + Letter + Moon + Star</h3>
-<p>All together for just ₹5!</p>
-<button class="btn" onclick="add('Smiley + Letter + Moon + Star Combo',5)">Add Combo</button>
+<h3>🌟 Ultimate Combo 1</h3>
+<p>Star + Smiley + Letter + Moon + Heart + Fish + Bone</p>
+<h2>₹10</h2>
+<button class="btn" onclick="add('Ultimate Combo 1',10)">Add to Cart</button>
 </div>
 <div class="offer">
-<h3>💜 Punctuation + Heart + Fish</h3>
-<p>All together for just ₹5!</p>
-<button class="btn" onclick="add('Punctuation + Heart + Fish Combo',5)">Add Combo</button>
-</div>
-<div class="offer">
-<h3>⭐ Arrow + Bone + Signal</h3>
-<p>All together for just ₹3!</p>
-<button class="btn" onclick="add('Arrow + Bone + Signal Combo',3)">Add Combo</button>
-</div>
-<div class="offer">
-<h3>👑 Ultimate Off Combo</h3>
-<p>Star + Smiley + Letter + Moon + Star + Heart + Fish + Bone</p>
-<p><b>₹10</b></p>
-<button class="btn" onclick="add('Ultimate Combo 1',10)">Add Combo</button>
-<hr>
+<h3>💜 Ultimate Combo 2</h3>
 <p>Punctuation + Arrow + Bird + Signal + Bone + Umbrella + Watermelon + Keychain</p>
-<p><b>₹27</b></p>
-<button class="btn" onclick="add('Ultimate Combo 2',27)">Add Combo</button>
+<h2>₹27</h2>
+<button class="btn" onclick="add('Ultimate Combo 2',27)">Add to Cart</button>
 </div>
+<p class="small" style="text-align:center">Please confirm combo contents and prices before accepting orders.</p>
 </section>
 
 <section id="cart">
-<h2 class="heading">🛒 Your Shopping Cart</h2>
-<div class="cart">
-<div id="cartItems">Your cart is empty. Let's go shopping! 💜</div>
+<h2 class="heading">🛒 My Shopping Cart</h2>
+<div class="cart-box">
+<div id="cartItems" class="empty">Your cart is empty 💜</div>
 <div class="total" id="total">Total: ₹0</div>
 
-<h3>Customer details</h3>
-<label>Your name</label>
-<input id="customer" placeholder="Enter your name">
+<h3>Customer Details</h3>
+<label>Name</label>
+<input id="customer" placeholder="Your name">
 <label>Delivery address</label>
-<textarea id="address" placeholder="Enter your delivery address"></textarea>
-<label>Additional message (optional)</label>
-<input id="note" placeholder="Any special instructions?">
+<textarea id="address" placeholder="Your full delivery address"></textarea>
+<label>Additional message</label>
+<input id="note" placeholder="Optional message">
 
-<h3>Choose your ordering method</h3>
 <button class="btn" onclick="checkoutWhatsApp()">Order on WhatsApp 📲</button>
-<button class="btn" onclick="onlinePayment()">Online Payment 💳</button>
-<p class="small">Online payment will be enabled once the store's payment link is configured.</p>
+<button class="btn" onclick="onlinePayment()">Pay Online 💳</button>
+<p class="small">Online payment will be available after the payment provider is connected.</p>
 </div>
 </section>
 
 <footer>
 <h3>💜 AH Homemade Stickers 💜</h3>
-<p>Thank you for supporting our small business!</p>
-<p>Have a Great Day! 😊</p>
+<p>Handmade with Love. Thank you for shopping with us!</p>
+<p>© 2026 AH Homemade Stickers</p>
 </footer>
 
 <script>
 const products=[
-{name:"Smiley Stickers (5)",price:1,emoji:"😊"},
-{name:"Letter Stickers (2)",price:2,emoji:"🔤"},
-{name:"Punctuation Stickers",price:1,emoji:"❗"},
-{name:"Heart Stickers",price:2,emoji:"💜"},
-{name:"Bone Stickers",price:1,emoji:"🦴"},
-{name:"Star Stickers",price:3,emoji:"⭐"},
-{name:"Moon Stickers",price:1,emoji:"🌙"},
-{name:"Arrow Stickers",price:3,emoji:"➡️"},
-{name:"Fish Stickers",price:3,emoji:"🐟"},
-{name:"Signal and Flower Stickers",price:3,emoji:"🌸"},
-{name:"Bird Stickers",price:3,emoji:"🐦"},
-{name:"Keychain",price:null,emoji:"🔑"}
+{name:"Smiley Stickers (5)",price:1,emoji:"😊",cat:"Cute"},
+{name:"Letter Stickers (2)",price:2,emoji:"🔤",cat:"Letters"},
+{name:"Punctuation Stickers",price:1,emoji:"❗",cat:"Other"},
+{name:"Heart Stickers",price:2,emoji:"💜",cat:"Shapes"},
+{name:"Bone Stickers",price:1,emoji:"🦴",cat:"Other"},
+{name:"Star Stickers",price:3,emoji:"⭐",cat:"Shapes"},
+{name:"Moon Stickers",price:1,emoji:"🌙",cat:"Shapes"},
+{name:"Arrow Stickers",price:3,emoji:"➡️",cat:"Other"},
+{name:"Fish Stickers",price:3,emoji:"🐟",cat:"Nature"},
+{name:"Signal and Flower Stickers",price:3,emoji:"🌸",cat:"Nature"},
+{name:"Bird Stickers",price:3,emoji:"🐦",cat:"Nature"},
+{name:"Keychain",price:null,emoji:"🔑",cat:"Other"}
 ];
 
 let cart=[];
+let category="All";
 
-document.getElementById("products").innerHTML=products.map((p,i)=>`
-<div class="card">
+function setCategory(value,button){
+category=value;
+document.querySelectorAll(".category").forEach(b=>b.classList.remove("active"));
+button.classList.add("active");
+renderProducts();
+}
+
+function renderProducts(){
+const q=document.getElementById("search").value.toLowerCase();
+const filtered=products.filter(p=>
+(category==="All"||p.cat===category)&&p.name.toLowerCase().includes(q)
+);
+document.getElementById("products").innerHTML=filtered.length?
+filtered.map(p=>{
+const i=products.indexOf(p);
+return `<div class="card">
 <div class="emoji">${p.emoji}</div>
 <h3>${p.name}</h3>
 <div class="price">${p.price===null?"Price on request":"₹"+p.price}</div>
 <button class="btn" onclick="addProduct(${i})">Add to Cart</button>
-</div>`).join("");
+</div>`;
+}).join(""):'<p class="empty">No matching products found.</p>';
+}
 
 function addProduct(i){
 const p=products[i];
@@ -153,70 +184,64 @@ add(p.name,p.price);
 }
 
 function add(name,price){
-const item=cart.find(x=>x.name===name);
+let item=cart.find(x=>x.name===name);
 if(item)item.qty++;
 else cart.push({name,price,qty:1});
 renderCart();
 }
 
-function changeQty(i,amount){
-cart[i].qty+=amount;
+function changeQty(i,n){
+cart[i].qty+=n;
 if(cart[i].qty<=0)cart.splice(i,1);
 renderCart();
 }
 
 function renderCart(){
-const el=document.getElementById("cartItems");
-if(cart.length===0){
-el.innerHTML="Your cart is empty. Let's go shopping! 💜";
-}else{
-el.innerHTML=cart.map((x,i)=>`
-<div class="cart-row">
+document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0);
+document.getElementById("cartItems").innerHTML=cart.length?
+cart.map((x,i)=>`<div class="cart-row">
 <span>${x.name}<br>₹${x.price} × ${x.qty}</span>
-<span>
-<button onclick="changeQty(${i},-1)">−</button>
+<span><button onclick="changeQty(${i},-1)">−</button>
 ${x.qty}
-<button onclick="changeQty(${i},1)">+</button>
-</span>
-</div>`).join("");
-}
+<button onclick="changeQty(${i},1)">+</button></span>
+</div>`).join(""):'<div class="empty">Your cart is empty 💜</div>';
 document.getElementById("total").textContent=
 "Total: ₹"+cart.reduce((s,x)=>s+x.price*x.qty,0);
 }
 
 function orderMessage(){
+if(!cart.length){alert("Your cart is empty!");return null;}
 const name=document.getElementById("customer").value.trim();
 const address=document.getElementById("address").value.trim();
-const note=document.getElementById("note").value.trim();
-if(!cart.length){alert("Your cart is empty!");return null;}
 if(!name||!address){alert("Please enter your name and delivery address.");return null;}
-let total=cart.reduce((s,x)=>s+x.price*x.qty,0);
-return `Hello AH Homemade Stickers! 💜\nI would like to place an order.\n\nName: ${name}\nAddress: ${address}\n\nItems:\n${cart.map(x=>`${x.name} x ${x.qty} = ₹${x.price*x.qty}`).join("\n")}\n\nTotal: ₹${total}\nAdditional message: ${note}`;
+const total=cart.reduce((s,x)=>s+x.price*x.qty,0);
+return `Hello AH Homemade Stickers!\nName: ${name}\nAddress: ${address}\n\nOrder:\n${cart.map(x=>x.name+" x "+x.qty+" = ₹"+(x.price*x.qty)).join("\n")}\n\nTotal: ₹${total}\nMessage: ${document.getElementById("note").value}`;
 }
 
 function checkoutWhatsApp(){
 const msg=orderMessage();
 if(!msg)return;
-// Replace with your WhatsApp number, including country code.
-const whatsappNumber="91XXXXXXXXXX";
-if(whatsappNumber.includes("X")){
-alert("Store owner: Add your WhatsApp number in the website code first.");
+const number="91XXXXXXXXXX";
+if(number.includes("X")){
+alert("WhatsApp is not connected yet. We will add your store number later.");
 return;
 }
-window.open("https://wa.me/"+whatsappNumber+"?text="+encodeURIComponent(msg),"_blank");
+window.open("https://wa.me/"+number+"?text="+encodeURIComponent(msg),"_blank");
 }
 
 function onlinePayment(){
 const msg=orderMessage();
 if(!msg)return;
-// Add your authorized payment provider's hosted payment link here.
 const paymentLink="";
 if(!paymentLink){
-alert("Online payment is not configured yet. Please use WhatsApp ordering for now.");
+alert("Online payment is not connected yet. We will configure it later.");
 return;
 }
 window.open(paymentLink,"_blank");
 }
+
+renderProducts();
+renderCart();
 </script>
 </body>
 </html>
